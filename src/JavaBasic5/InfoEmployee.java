@@ -3,25 +3,22 @@ package JavaBasic5;
 import java.util.ArrayList;
 
 public class InfoEmployee {
-    public static void main(String[] args) {
-        ArrayList<String> infolist = new ArrayList<>();
-        AddInfoEmployee(infolist);
-        System.out.println(" Thông tin nhân viên: " +infolist);
-        for (int i = 0; i<infolist.size(); i++){
-            System.out.println(" Nhân viên sau khi duyệt thông tin : " +infolist.get(i));
-        }
+    // Array list lưu thông tin nhân vien
+    static ArrayList<String> infolist = new ArrayList<>();
+
+    // Hàm thêm nhiều nhân vien
+    public static void AddInfoEmployee (String id, String name,int age, String phongban){
+        String thongtinNV ="id:" + id +", name:" + name +", age:" + age +", phongban:" + phongban;
+        infolist.add(thongtinNV);
+
     }
-    public static void AddInfoEmployee (ArrayList<String> infolist){;
-        ArrayList employee = new ArrayList<>();
-        infolist.add("Phan Thị Ngọc Hạnh");
-        infolist.add("10/10/1992");
-        infolist.add("Thành Phố Hồ Chí Minh");
-        infolist.add("Công nghệ thông tin");
-        infolist.add("Tester");
-        infolist.add("0901371474");
-        infolist.add("phanthingochanh112@gmail.com");
-
-        // In ra thông tin với vòng lặp for basic
-
+    public static void main(String[] args) {
+        //Gọi hàm thêm nhân viên
+        AddInfoEmployee("01","Phan Thị Ngọc Hạnh",34,"QA" );
+        AddInfoEmployee("02","Trần Thị Cẩm Châu",28,"QA");
+        // Duyệt list băng for
+        for (int i = 0; i<infolist.size(); i++){
+            System.out.println(infolist.get(i));
+        }
     }
 }

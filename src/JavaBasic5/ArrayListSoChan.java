@@ -11,7 +11,6 @@ public class ArrayListSoChan {
                 list.add(i);
             }
         }
-
          // Ctrl + Alt + L chinh format code
         System.out.println(list);
         // Vòng lap duyet qua từng phần tử mảng
